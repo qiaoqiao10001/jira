@@ -1,10 +1,6 @@
 import React from "react";
 
 export default function List({ list, users }) {
-  // useEffect(() => {
-  //   console.log(users);
-
-  // })
   return (
     <div>
       <table>
