@@ -1,16 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/*
+ * @Title: $1
+ * @Package: $2
+ * @Description: $3
+ * @Date: 2022-09-09 11:25:16
+ * @Author: zhangqiao
+ * @Version: v1.0
+ * @License: Copyright Since 2015 Hive Box Technology. All rights reserved.
+ * @Notice: This content is limited to the internal circulation of Hive Box, and it is prohibited to leak or used for other commercial purposes
+ */
+import React from "react";
+import ReactDOM from "react-dom/client";
+// import App from './App';
+import reportWebVitals from "./reportWebVitals";
+import App from "./App";
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
