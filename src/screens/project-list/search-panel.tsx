@@ -1,16 +1,18 @@
-/*
- * @Title: $1
- * @Package: $2
- * @Description: $3
- * @Date: 2022-09-09 16:02:06
- * @Author: zhangqiao
- * @Version: v1.0
- * @License: Copyright Since 2015 Hive Box Technology. All rights reserved.
- * @Notice: This content is limited to the internal circulation of Hive Box, and it is prohibited to leak or used for other commercial purposes
- */
 import React from "react";
+export interface User {
+  id: number;
+  name: string;
+}
+interface SearchPanelProps {
+  users: User[];
+  param: {
+    name: string;
+    personId: string;
+  };
+  setParam: (param: SearchPanelProps["param"]) => void;
+}
 
-const SearchPanel = ({ param, users, setParam, setUsers }) => {
+const SearchPanel = ({ param, users, setParam }: SearchPanelProps) => {
   return (
     <form>
       <input

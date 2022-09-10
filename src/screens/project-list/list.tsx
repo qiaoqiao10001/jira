@@ -1,6 +1,18 @@
 import React from "react";
+import { User } from "./search-panel";
+interface userList {
+  id: number;
+  name: string;
+  personId: number;
+  organization: string;
+}
 
-export default function List({ list, users }) {
+interface IList {
+  list: userList[];
+  users: User[];
+}
+
+export default function List({ list, users }: IList) {
   return (
     <div>
       <table>
