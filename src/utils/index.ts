@@ -8,7 +8,7 @@
  * @License: Copyright Since 2015 Hive Box Technology. All rights reserved.
  * @Notice: This content is limited to the internal circulation of Hive Box, and it is prohibited to leak or used for other commercial purposes
  */
-const isFalsy = (value: any) => (value === 0 ? false : !value);
+const isFalsy = (value: unknown) => (value === 0 ? false : !value);
 export const clearObj = function (obj: object) {
   let result: object = { ...obj };
   // debugger

@@ -1,6 +1,7 @@
 // 自定义hooks 编写规则， 如果这个hooks需要用到其他hooks 则可以抽离这一部分，不然直接写成函数
 import { useEffect, useState } from "react";
-export const useDebounce = (value: object, delay?: number) => {
+export const useDebounce = <T>(value: T, delay?: number) => {
+  // tuple 类型，数量固定，类型各异版本的数组
   const [debounceValue, setDebounceValue] = useState(value);
 
   useEffect(() => {
