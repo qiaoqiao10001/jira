@@ -10,6 +10,7 @@ import { useDebounce } from "hooks/useDebounce";
 //   name: string,
 //   personId: string
 // }
+// import axios from 'axios'
 const apiURL = process.env.REACT_APP_API_URL;
 
 export default function ProjectList() {
@@ -21,6 +22,12 @@ export default function ProjectList() {
   const [list, setList] = useState([]);
   const debounceParam = useDebounce(param, 200);
   useEffect(() => {
+    // axios.get(`${apiURL}/projects?${qs.stringify(clearObj(debounceParam))}`)
+    // .then(res => {
+    //   console.log(res);
+    //   // @ts-ignore
+    //   setList(res)
+    // })
     fetch(`${apiURL}/projects?${qs.stringify(clearObj(debounceParam))}`).then(
       async (res) => {
         if (res.ok) {
