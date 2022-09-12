@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        width: 300px;
+        height: 300px;
+        background: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <ul>
+        <li></li>
+      </ul>
+      <p id="p"></p>
+      <h1>title</h1>
+      <input type="text" id="input" />
+    </div>
+    <script>
+      window.addEventListener("load", (e) => {
+        let p = document.getElementById("p");
+        p.addEventListener("contextmenu", (e) => {
+          e.preventDefault();
+          console.log(e);
+        });
+      });
+      window.addEventListener("beforeunload", (e) => {
+        let msg = "离开吗";
+        e.returnValue = msg;
+        return msg;
+      });
+      let code = "abcxyz";
+      console.log(code.charCodeAt(0));
+      console.log(code.charCodeAt(5));
+      let input = document.querySelector("#input");
+      input.addEventListener("compositionupdate", (e) => {
+        // [97, 122]
+        // e.data
+        let code = e.data.charCodeAt(0);
+        if (code > 96 && code < 123) {
+          console.log("按住英文");
+        } else {
+          console.log("");
+        }
+      });
+      input.addEventListener("compositionend", (e) => {
+        console.log(e);
+      });
+      let range1 = document.createRange(),
+        range2 = document.createRange(),
+        p1 = document.getElementById("p");
+      console.log(range1);
+      console.log(range1.selectNodeContents(p1));
+    </script>
+  </body>
+</html>

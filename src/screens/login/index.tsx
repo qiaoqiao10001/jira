@@ -28,10 +28,14 @@ export default function Login() {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="username">用户名</label>
-        <input type="text" id="username" />
-      </div>
+      <div
+        children={
+          <>
+            <label htmlFor="username">用户名</label>
+            <input type="text" id="username" />
+          </>
+        }
+      />
       <div>
         <label htmlFor="pwd">密码</label>
         <input type="password" id="pwd" />
