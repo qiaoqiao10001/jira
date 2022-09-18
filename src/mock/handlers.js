@@ -1,4 +1,5 @@
 import { rest } from "msw";
+
 const project = [
   {
     id: 1,
@@ -52,8 +53,10 @@ const users = [
 
 export const handlers = [
   rest.post("/register", (req, res, ctx) => {
+    // 注册成功之后返回id，密码，token
     return res(
       ctx.json({
+        id: v4,
         username: "admin",
         token: "tokenabcccss",
       }),

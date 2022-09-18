@@ -26,7 +26,6 @@ export default function List({ list, users }: IList) {
           {list.map((item) => (
             <tr key={item.id}>
               <td>{item.name}</td>
-
               <td>{users.find((user) => user.id === item.personId)?.name}</td>
             </tr>
           ))}
